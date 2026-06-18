@@ -1,19 +1,28 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.jiaojunwei.ideaplugin</id>
-    <name>idea-plugin</name>
-    <vendor>jiaojunwei</vendor>
+    <!-- 插件的唯一标识符，不能和市场上的别人重复，建议用反域名格式，比如 com.yourname.myplugin -->
+    <id>com.yourname.myplugin</id>
+
+    <!-- 插件的名字，展示给用户看的 -->
+    <name> 插件基础模版 </name>
+
+    <!-- 你的开发者信息 -->
+    <vendor email="your_email@example.com" url="https://github.com/yourname">Your Name</vendor>
+
+    <!-- 插件的详细描述，支持 HTML 标签 -->
     <description><![CDATA[
-        <p><b>idea-plugin</b> is a repository that provides a pure template to make it easier to create a new plugin project.</p>
-        <p>The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.</p>
+        这是一个干净的idea插件模版，由idea官方的模版改造而来，删除了官方模版中的示例内容，现在是一个干净的环境
     ]]></description>
 
+    <!-- 依赖：声明这是一个基础插件，兼容所有基于 IntelliJ 的 IDE -->
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
+    <!-- 你的扩展点注册将写在这里（目前为空） -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.jiaojunwei.ideaplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.jiaojunwei.ideaplugin.startup.MyProjectActivity" />
     </extensions>
+
+    <!-- 你的动作(菜单/按钮)将写在这里（目前为空） -->
+    <actions>
+    </actions>
+
 </idea-plugin>
